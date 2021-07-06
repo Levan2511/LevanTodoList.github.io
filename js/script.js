@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     DOMElements.addBtn.addEventListener('click', function(event) {
         event.preventDefault();
-        if (/^[\w-а-яё]+.*/gmi.test(DOMElements.addItemInput.value.trim())) {
+        if (/^[a-z0-9а-яё-]+.*/gmi.test(DOMElements.addItemInput.value.trim())) {
             const itemAndInput = insertItemToList(DOMElements.addItemInput.value, DOMElements.itemsWrapper);
             DOMElements.items.push(itemAndInput[0]);
 
