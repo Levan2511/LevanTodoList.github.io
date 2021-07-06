@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1 class="title">Levan`s Todo List</h1>
+        <div class="settings-wrapper">
+            <form class="add-item-form">
+                <input type="text" class="add-item-input" name="addItem" placeholder="Add new task...">
+                <button type="button" class="show-completed-items">Show Completed Items</button>
+                <button class="add-item-btn">+</button>
+            </form>
+        </div>
+        <div class="items-wrapper">
+        </div>
+    </div>
+    
+    <div class="done-items-wrapper d-none">
+        <ul class="done-items-list">
+        </ul>
+        <div class="closeBtn">&times;</div>
+    </div>
+    <script src="https://kit.fontawesome.com/f8716bbdc8.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

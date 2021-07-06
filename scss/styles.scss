@@ -1,0 +1,170 @@
+@import '_variables';
+* {
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+    padding: 4rem 1rem;
+    background: linear-gradient(to right,rgba(255, 212, 119, 0.8) 0%, rgba(255, 130, 128, 0.8) 50%, rgba(255, 212, 119, 0.8) 100%);
+}
+.title {
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.add-item-form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 60%;
+    margin: 3rem auto 0;
+}
+.add-item-input {
+    @include item-field;
+    width: 70%;
+}
+.show-completed-items {
+    padding: 0 15px;
+    font-size: 1rem;
+    min-height: 2rem;
+    background: linear-gradient(to top, rgb(188, 215, 255), rgb(152, 188, 255));
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgb(131, 131, 131);
+    color: rgb(43, 43, 43);
+    cursor: pointer;
+}
+.closeBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.add-item-btn {
+    position: absolute;
+    top: 1.5rem;
+    left: calc(70% - 3.2rem);
+    transform: translate(0, -50%);
+    width: 2rem;
+    height: 2rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 83, 83, 0.5);
+    cursor: pointer;
+    transition: .5s all;
+}
+.add-item-btn:hover {
+    background: rgb(255, 83, 83);
+}
+.items-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 60%;
+    margin: 5rem auto 0;
+}
+.item-input {
+    @include item-field;
+    width: 70%;
+}
+.item-input:focus {
+    box-shadow: inset 0 0 6px 4px rgb(132, 247, 255);
+}
+.item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: .5rem;
+    transition: 1s all;
+}
+.editing-item::before {
+    content: 'Edit item \2192';
+    position: absolute;
+    left: -15px;
+    transform: translateX(-100%);
+    display: block;
+    padding: 5px;
+    font-weight: bold;
+    color: rgb(240, 77, 77);
+    background: rgb(132, 247, 255);
+}
+.done-btn,
+.edit-btn,
+.delete-btn,
+.accept-btn {
+    @include btn-for-items;
+}
+.done-btn,
+.accept-btn {
+    background: linear-gradient(to bottom, #83E109, #09E114);
+}
+.edit-btn {
+    background: linear-gradient(to bottom, #7efbff, rgb(47, 248, 255));
+}
+.delete-btn {
+    background: linear-gradient(to bottom, #ff6363, rgb(255, 80, 27));
+}
+.accept-btn {
+    width: 6rem;
+    font-size: 1rem;
+    font-weight: normal;
+}
+.fa-check,
+.fa-edit,
+.fa-trash {
+    font-size: 1rem;
+}
+.move-left {
+    transform: translate(-200%, -100px) rotateX(-120deg);
+}
+.move-right {
+    transform: translate(1000px, 0);
+}
+.deleting {
+    background: red;
+}
+.done-items-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    max-width: 80%;
+    min-height: 50vh;
+    background: rgba(0, 129, 168, 0.788);
+}
+.done-items-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 50vh;
+    text-align: center;
+    list-style-type: disc;
+    font-size: 1.4rem;
+    color: white;
+}
+.done-list-item {
+    padding: 20px;
+}
+.blur-effect {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.d-none {
+    display: none;
+}

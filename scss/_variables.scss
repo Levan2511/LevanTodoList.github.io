@@ -1,0 +1,22 @@
+$size-1p8-rem: 1.8rem;
+@mixin item-field {
+    padding: 10px 20px;
+    height: 3rem;
+    font-size: 1.2rem;
+    outline: none;
+    border: 2px solid rgb(115, 222, 255);
+    border-radius: 4px;
+}
+@mixin btn-for-items {
+    outline: none;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    padding: 0;
+    cursor: pointer;
+    transition: .6s all;
+    color: rgb(71, 71, 71);
+    &:hover {
+        color: rgb(29, 29, 29);
+    }
+}
